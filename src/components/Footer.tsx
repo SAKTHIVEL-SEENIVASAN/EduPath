@@ -11,7 +11,7 @@ const Footer = () => (
           <span className="font-heading text-lg font-bold gradient-text">EduPath</span>
         </div>
         <p className="text-sm text-muted-foreground">
-          © 2026 EduPath. AI-powered education guidance for Indian students.
+          © 2026 EduPath. AI-powered education financing platform for Indian students.
         </p>
       </div>
     </div>

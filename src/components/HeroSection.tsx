@@ -1,13 +1,13 @@
-import { ArrowRight, Brain, GraduationCap, TrendingUp, Shield } from "lucide-react";
+import { ArrowRight, Brain } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import heroBg from "@/assets/hero-bg.jpg";
 
 const stats = [
-  { value: "50K+", label: "Students Guided" },
-  { value: "500+", label: "Universities" },
-  { value: "₹2000Cr+", label: "Loans Facilitated" },
-  { value: "94%", label: "Approval Rate" },
+  { value: "48 Hrs", label: "Working Prototype" },
+  { value: "500+", label: "Universities Indexed" },
+  { value: "LCI Score", label: "AI Loan Model" },
+  { value: "100K+", label: "Scalable Architecture" },
 ];
 
 const HeroSection = () => (
@@ -24,32 +24,36 @@ const HeroSection = () => (
 
     <div className="container mx-auto px-4 relative z-10">
       <div className="max-w-3xl mx-auto text-center animate-slide-up">
+        
         <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-primary/30 bg-primary/5 text-primary text-sm font-medium mb-6">
           <Brain className="w-4 h-4" />
-          AI-Powered Education Platform
+          AI-Powered Education Financing Platform
         </div>
 
         <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl font-bold leading-tight mb-6">
-          Your AI Guide to{" "}
-          <span className="gradient-text">Higher Education</span>
-          {" "}& Smart Loans
+          From Confusion to <span className="gradient-text">Loan Approval</span>
         </h1>
 
         <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-8">
-          From discovering the perfect university to securing the best education loan — EduPath's AI navigates every step of your journey with confidence.
+          EduPath is an AI-powered platform that guides students across the entire education journey — from choosing the right career path to securing and repaying education loans.
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
           <Link to="/career">
-            <Button size="lg" className="gradient-primary text-primary-foreground font-semibold text-base px-8 glow-primary">
+            <Button size="lg" className="gradient-primary text-primary-foreground px-8">
               Explore Careers <ArrowRight className="ml-2 w-5 h-5" />
             </Button>
           </Link>
+
           <Link to="/loan">
-            <Button size="lg" variant="outline" className="border-border text-foreground font-semibold text-base px-8">
-              Calculate Your Loan
+            <Button size="lg" variant="outline" className="px-8">
+              Calculate Loan
             </Button>
           </Link>
+
+          <Button size="lg" variant="outline">
+            View Demo
+          </Button>
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
@@ -60,6 +64,7 @@ const HeroSection = () => (
             </div>
           ))}
         </div>
+
       </div>
     </div>
   </section>

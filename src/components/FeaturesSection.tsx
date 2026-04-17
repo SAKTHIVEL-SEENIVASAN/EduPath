@@ -1,70 +1,65 @@
-import { Brain, Target, Wallet, BarChart3, MessageSquare, Shield } from "lucide-react";
+import { Brain, Shield, Wallet, BarChart3, FileText, Search } from "lucide-react";
 
 const features = [
   {
     icon: Brain,
     title: "AI Career Navigator",
-    description: "Get personalized country, course, and university recommendations based on your profile, interests, and budget.",
+    description: "Personalized university and course recommendations using AI reasoning based on your profile.",
     gradient: "gradient-primary",
-  },
-  {
-    icon: Target,
-    title: "Admission Predictor",
-    description: "Know your chances before you apply. Our AI analyzes thousands of data points to predict admission probability.",
-    gradient: "gradient-accent",
-  },
-  {
-    icon: BarChart3,
-    title: "ROI & Salary Simulator",
-    description: "Simulate your future earnings, compare universities by ROI, and make data-driven decisions.",
-    gradient: "gradient-primary",
-  },
-  {
-    icon: Wallet,
-    title: "Smart Loan Engine",
-    description: "AI-matched loan offers with real-time eligibility, EMI calculator, and risk assessment — all in seconds.",
-    gradient: "gradient-warm",
-  },
-  {
-    icon: MessageSquare,
-    title: "AI Mentor Chatbot",
-    description: "24/7 conversational guidance for applications, SOPs, visa prep, and loan queries powered by advanced LLMs.",
-    gradient: "gradient-accent",
   },
   {
     icon: Shield,
-    title: "Trust & Confidence Score",
-    description: "Our unique AI Readiness Score and Loan Confidence Indicator help you feel secure about every decision.",
+    title: "Loan Confidence Index (LCI)",
+    description: "AI scoring system that evaluates loan eligibility using academic, financial, and behavioral signals with explainability.",
+    gradient: "gradient-accent",
+  },
+  {
+    icon: Wallet,
+    title: "Safe Apply Mode",
+    description: "Pre-qualification without affecting your credit score — reduces risk and improves decision confidence.",
+    gradient: "gradient-warm",
+  },
+  {
+    icon: BarChart3,
+    title: "EMI & ROI Simulator",
+    description: "Simulate long-term repayment, salary growth, and financial stress scenarios before committing.",
+    gradient: "gradient-primary",
+  },
+  {
+    icon: Search,
+    title: "University Matcher",
+    description: "Find best-fit universities from 500+ dataset based on profile, budget, and ROI.",
+    gradient: "gradient-accent",
+  },
+  {
+    icon: FileText,
+    title: "AI Document Assistant",
+    description: "Auto-fill and extract student data using OCR and NLP (POC level implementation).",
     gradient: "gradient-primary",
   },
 ];
 
 const FeaturesSection = () => (
-  <section className="py-24 relative">
-    <div className="container mx-auto px-4">
-      <div className="text-center mb-16 animate-fade-in">
-        <h2 className="font-heading text-3xl md:text-4xl font-bold mb-4">
-          Everything You Need, <span className="gradient-text">AI-Powered</span>
-        </h2>
-        <p className="text-muted-foreground max-w-xl mx-auto">
-          Six intelligent modules working together to take you from exploration to enrollment.
-        </p>
-      </div>
+  <section className="py-24">
+    <div className="container mx-auto px-4 text-center mb-16">
+      <h2 className="text-3xl font-bold mb-4">
+        Core <span className="gradient-text">AI Modules</span>
+      </h2>
+      <p className="text-muted-foreground max-w-xl mx-auto">
+        Built to guide students across the full lifecycle — not just one step.
+      </p>
+    </div>
 
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {features.map((f) => (
-          <div
-            key={f.title}
-            className="group card-glass rounded-2xl p-6 hover:border-primary/30 transition-all duration-300 hover:-translate-y-1"
-          >
-            <div className={`w-12 h-12 rounded-xl ${f.gradient} flex items-center justify-center mb-4`}>
-              <f.icon className="w-6 h-6 text-primary-foreground" />
-            </div>
-            <h3 className="font-heading text-lg font-semibold mb-2">{f.title}</h3>
-            <p className="text-sm text-muted-foreground leading-relaxed">{f.description}</p>
+    <div className="container mx-auto px-4 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {features.map((f) => (
+        <div key={f.title} className="card-glass p-6 rounded-2xl">
+          <div className={`w-12 h-12 ${f.gradient} rounded-xl flex items-center justify-center mb-4`}>
+            <f.icon className="w-6 h-6 text-white" />
           </div>
-        ))}
-      </div>
+          <h3 className="font-semibold mb-2">{f.title}</h3>
+          <p className="text-sm text-muted-foreground">{f.description}</p>
+        </div>
+      ))}
     </div>
   </section>
 );
